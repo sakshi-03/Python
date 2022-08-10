@@ -1,0 +1,132 @@
+def ifempty():
+    print("First enter some elements in Set A\n")
+    num1 = int(input("How many values do you want to insert in Set A ? "))
+    for i in range(num1):
+        ele1 = input("Enter the element : ")
+        set_A.add(ele1)
+def add():
+    num1 = int(input("How many values do you want to insert in Set A ? "))
+    for i in range(num1):
+        ele1 = input("Enter the element : ")
+        set_A.add(ele1)
+
+    print("Your new updated set is : ", set_A)
+
+
+def remove():
+    rem_val = input("Enter the value you want to remove : ")
+    if rem_val in set_A:
+        set_A.remove(rem_val)
+    else:
+        print("This value wasn't found !")
+
+    print("Your new updated set is : ", set_A)
+
+
+def contains():
+    con_val = input("Enter the value you want to check in Set A: ")
+    if con_val in set_A:
+        print("Set A contains ", con_val)
+    else:
+        print("Set A doesn't contain ", con_val)
+
+
+def size():
+    print("Set A contains", len(set_A), "elements .")
+
+
+def intersection():
+    set_B = set()
+    print("To check the intersection between two sets i.e. Set A and Set B, First enter some elements in Set B.")
+    num2 = int(input("How many elements you want in Set B ? "))
+    ele2 = input("Enter the element : ")
+    set_B.add(ele2)
+    print("Set A : ", set_A)
+    print("Set B : ", set_B)
+    print("Intersection of Set A and Set B is : ", set_A & set_B)
+
+
+def union():
+    set_B = set()
+    print("To check the union of two sets i.e. Set A and Set B, First enter some elements in Set B.")
+    num2 = int(input("How many elements you want in Set B ? "))
+    ele2 = input("Enter the element : ")
+    set_B.add(ele2)
+    print("Set A : ", set_A)
+    print("Set B : ", set_B)
+    print("Union of Set A and Set B is : ", set_A | set_B)
+
+
+def difference():
+    set_B = set()
+    print("To check the difference between two sets i.e. Set A and Set B, First enter some elements in Set B.")
+    num2 = int(input("How many elements you want in Set B ? "))
+    ele2 = input("Enter the element : ")
+    set_B.add(ele2)
+    print("Set A : ", set_A)
+    print("Set B : ", set_B)
+    print("Difference between Set A and Set B is : ", set_A - set_B)
+
+
+def subset():
+    set_B = set()
+    print("To check th intersection between two sets i.e. Set A and Set B, First enter some elements in Set B.")
+    num2 = int(input("How many elements you want in Set B ? "))
+    ele2 = input("Enter the element : ")
+    set_B.add(ele2)
+    print("Set A : ", set_A)
+    print("Set B : ", set_B)
+
+    if set_B in set_A:
+        print("Set B is a subset of Set A.")
+    elif set_A in set_B:
+        print("Set A is a subset of Set B.")
+    else:
+        print("No subsets found !")
+
+
+set_A = set()
+print("**************************\n1) Add new elements to Set A.\n2) Remove a value from Set A.\n3) Check if "
+        "Set A contains a given element.\n4) How many elements does Set A contains ?\n5)"
+        " Intersection of Set A and Set B\n6) Union of Set A and Set B\n7) "
+        "Difference of Set A and Set B\n8) Check Subset.\n**************************\n")
+cont = 'y'
+while cont == 'y' or cont == 'Y':
+    ch = int(input("Enter Your Choice(1-8) : "))
+    if ch == 1:
+        add()
+    elif ch == 2:
+        if len(set_A) == 0:
+            ifempty()
+        remove()
+    elif ch == 3:
+        if len(set_A) == 0:
+            ifempty()
+        contains()
+    elif ch == 4:
+        if len(set_A) == 0:
+            ifempty()
+        size()
+    elif ch == 5:
+        if len(set_A) == 0:
+            ifempty()
+        intersection()
+    elif ch == 6:
+        if len(set_A) == 0:
+            ifempty()
+        union()
+    elif ch == 7:
+        if len(set_A) == 0:
+            ifempty()
+        difference()
+    elif ch == 8:
+        if len(set_A) == 0:
+            ifempty()
+        subset()
+    else:
+        print("INVALID CHOICE !!!")
+    cont = input("Do you want to continue (y/n)?: ")
+
+else:
+    print("Thank You...!")
+
