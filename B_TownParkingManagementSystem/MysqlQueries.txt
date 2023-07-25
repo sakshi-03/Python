@@ -1,0 +1,27 @@
+
+########################################################....mysql....###############################################################
+
+
+mysql> create database software;
+
+mysql> use software;
+
+mysql> create table parking_det(p_id varchar(5),p_name varchar(30),level int(2),veh_no varchar(20) not null primary key,checkin datetime,checkout datetime);
+
+mysql> create table vehicle_det(v_no varchar(20),v_name varchar(20),date_of_purchase date,foreign key(v_no) references parking_det(veh_no));
+
+mysql> insert into parking_det values("B5","Taapsee Pannu",2,"DL 05 DB 7879","2020-01-23 13:01:00","2020-01-24 10:30:00");
+
+mysql> insert into parking_det values("A1","Ranbir Kapoor",1,"MH 02 CP 1010","2020-01-12 12:23:00","2020-01-19 11:30:00");
+
+mysql> insert into parking_det values("A3","Deepika Padukone",3,"MH 08 FB 7777","2020-01-11 12:30:00","2020-01-13 09:30:00");
+
+mysql> insert into parking_det values("B2","Alia Bhatt",2,"MH 14 KJ 3231","2020-02-10 10:13:00","2020-02-12 05:30:00");
+
+mysql> insert into vehicle_det values("MH 14 KJ 3231","Jaguar","2018-04-11");
+
+mysql> insert into vehicle_det values("MH 08 FB 7777","BMW","2013-12-03");
+
+mysql> insert into vehicle_det values("DL 05 DB 7879","Audi","2000-05-08");
+
+mysql> insert into vehicle_det values("MH 02 CP 1010","Mercedes Benz","2017-11-18");
