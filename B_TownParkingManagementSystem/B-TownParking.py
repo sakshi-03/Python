@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 14 21:00:59 2020
-
-@author: Gokul
-"""
 ###importing mysql.connector to connect python with mysql database###
  
 import mysql.connector as sqltor
