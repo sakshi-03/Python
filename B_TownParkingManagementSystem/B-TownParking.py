@@ -33,7 +33,7 @@ def Add_Record():
 
     ## SQL Query
 
-    sql="insert into parrking_det (p_id,p_name,level,veh_no,checkin,checkout)values('{}','{}','{}','{}','{}','{}')".format(p_id,p_name,level,vehicle_no,checkin,checkout) 
+    sql="insert into parking_det (p_id,p_name,level,veh_no,checkin,checkout)values('{}','{}','{}','{}','{}','{}')".format(p_id,p_name,level,vehicle_no,checkin,checkout) 
     
     cursor.execute(sql) 
     
