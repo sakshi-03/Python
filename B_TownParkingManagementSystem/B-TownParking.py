@@ -13,7 +13,7 @@ import os
 
 ##establishing connection of python with database
 
-connection=sqltor.connect(host="localhost",user="root",password="gayuadi",database="software") 
+connection=sqltor.connect(host="localhost",user="root",password="******",database="software") 
 cursor=connection.cursor()
 
 # BLOCK FOR INSERTING THE DATA
